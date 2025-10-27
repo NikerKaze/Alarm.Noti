@@ -21,10 +21,11 @@ public class AlarmReciver extends BroadcastReceiver {
         String CHANNEL_NAME="NAME";
         int NOTIFICATION_ID=1;
         NotificationManager notificationManager=(NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O) {
             NotificationChannel channel=new NotificationChannel(CHANNEL_ID,CHANNEL_NAME,NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
+
         NotificationCompat.Builder notiBbuilder=new NotificationCompat.Builder(context,CHANNEL_ID).
                 setSmallIcon(R.drawable.ic_launcher_foreground).
                 setContentTitle("Alarm").

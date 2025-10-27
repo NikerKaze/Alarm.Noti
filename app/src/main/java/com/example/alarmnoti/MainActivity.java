@@ -37,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String time=editText.getText().toString();
                 int TimeInSec=Integer.parseInt(time);
-                alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime()+TimeInSec*1000,alarmIntent);;
+                alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime()+TimeInSec*1000,alarmIntent);
             }
         });
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
